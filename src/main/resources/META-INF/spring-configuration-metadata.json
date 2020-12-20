@@ -1,0 +1,18 @@
+{"groups": [
+    {
+        "name": "cashid.authkeys",
+        "type": "cash.muro.springsecurity.authentication.cashid.conf.AuthKeysConf",
+        "sourceType": "cash.muro.springsecurity.authentication.cashid.conf.AuthKeysConf"
+    }
+],"properties": [
+    {
+        "name": "cashid.authkeys.timetoexpire",
+        "type": "java.time.Duration",
+        "sourceType": "cash.muro.springsecurity.authentication.cashid.conf.AuthKeysConf"
+    },
+    {
+        "name": "cashid.authkeys.bits",
+        "type": "java.lang.Integer",
+        "sourceType": "cash.muro.springsecurity.authentication.cashid.conf.AuthKeysConf"
+    }
+]}

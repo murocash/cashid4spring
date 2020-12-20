@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" 
+	xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+	xmlns:sec="http://www.springframework.org/security/tags">
+<head>
+<th:block layout:fragment="script">
+	<script src="/js/cashid.js"></script>
+</th:block>
+</head>
+<body>
+	<div th:fragment="cashid-msg">			
+		<div id="cashid-msg" class="modal"></div>
+	</div>
+	<div th:fragment="user">
+		<div sec:authorize="isAuthenticated()" id="user-details">
+			<div id="user-name">
+				<span class="user-label" th:text="#{userId}">:</span> <span class="value" sec:authentication="name"></span>
+			</div>
+			<button id="cashid-logout" th:text="#{logout}">Logout</button>
+		</div>
+		<div sec:authorize="!isAuthenticated()" id="user-details">
+			<button class="cashid-login" th:text="#{login}">Login via Badger</button>
+			<div id="error"></div>
+		</div>
+		<input type="hidden" id="csrf" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
+	</div>
+</body>
+</html>

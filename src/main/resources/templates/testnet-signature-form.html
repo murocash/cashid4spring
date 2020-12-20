@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>Send testnet signature</title>
+<script src="/js/cashid-testnet.js"></script>
+<style> 
+input, textarea{
+  width: 95%;
+}
+</style>
+</head>
+<body>
+	<div id="user" th:include="fragments/cashid :: user"></div>
+	<div class="form-field">
+		<label>Address</label> <input type="text" id="address" value="bchtest:qqdt4y77x3khlygjg3z8u2g5kdscvuadgg20f54stw">
+		<button id="get-request">Get CashId Request</button>
+	</div>
+	<div class="form-field">
+		<label>Request</label> <input type="text" id="request">
+	</div>
+	<div class="form-field">
+		<label>Signature</label>
+		<textarea id="signature" rows="3" cols="40"></textarea>
+	</div>
+	<div id="error"></div>
+	<button id="login">Login</button>
+</body>
+</html>
