@@ -20,8 +20,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.context.annotation.SessionScope;
 
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.ObjectReader;
+import com.emiperez.commons.json.apiselector.Json;
 
 import cash.muro.bch.model.BchException;
 import cash.muro.bch.model.BchValidatedAddress;
@@ -72,10 +71,9 @@ public class CashIdController {
 	@ResponseBody
 	public CashIdStatus cashidAuth(@RequestBody String jsonString, HttpServletResponse response) {
 		HttpStatus status = HttpStatus.UNAUTHORIZED;
-		ObjectReader jsonParser = new ObjectMapper().reader();
 		CashIdResponseBody responseBody = null;
 		try {
-			responseBody = jsonParser.readValue(jsonString, CashIdResponseBody.class);
+			responseBody = Json.INSTANCE.api().deserialize(jsonString, CashIdResponseBody.class);
 		} catch (IOException e) {
 			status = HttpStatus.BAD_REQUEST;
 			response.setStatus(status.value());
