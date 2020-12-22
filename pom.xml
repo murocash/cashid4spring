@@ -5,7 +5,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>cash.muro</groupId>
 	<artifactId>cashid4spring</artifactId>
-	<version>0.1.0-alpha</version>
+	<version>0.1.0-SNAPSHOT</version>
 	<name>cashid4spring</name>
 	<description>CashId authentication for Spring Security</description>
 	<url>https://github.com/murocash/cashid4spring</url>
@@ -20,7 +20,7 @@
 	<licenses>
 		<license>
 			<name>MIT License</name>
-			<url>https://github.com/murocash/repeson4bchn/blob/main/LICENSE</url>
+			<url>https://github.com/murocash/muro.cash/blob/main/LICENSE</url>
 		</license>
 	</licenses>
 
