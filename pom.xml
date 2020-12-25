@@ -15,10 +15,6 @@
 	<description>CashId authentication for Spring Security</description>
 	<url>https://github.com/murocash/cashid4spring</url>
 
-	<properties>
-		<revision>0.1.0-SNAPSHOT</revision>
-	</properties>
-
 	<licenses>
 		<license>
 			<name>MIT License</name>
@@ -44,13 +40,6 @@
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity5</artifactId>
 			<version>3.0.4.RELEASE</version>
-		</dependency>
-
-		<dependency>
-			<groupId>org.projectlombok</groupId>
-			<artifactId>lombok</artifactId>
-			<version>${lombok.version}</version>
-			<optional>true</optional>
 		</dependency>
 
 		<dependency>
