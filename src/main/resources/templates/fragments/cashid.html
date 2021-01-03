@@ -14,7 +14,7 @@
 	<div th:fragment="user">
 		<div sec:authorize="isAuthenticated()" id="user-details">
 			<div id="user-name">
-				<span class="user-label" th:text="#{userId}">:</span> <span class="value" sec:authentication="name"></span>
+				<span class="user-label" th:text="#{user-id}">:</span> <span class="value" sec:authentication="name"></span>
 			</div>
 			<button id="cashid-logout" th:text="#{logout}">Logout</button>
 		</div>
